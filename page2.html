@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+    <style>
+        body {
+            font-family: Vazir, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: rgb(40,32,120);
+
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            position: relative;
+        }
+        .mahyar {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            background: #444;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .menu a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        .menu a:hover {
+            background: #666;
+        }
+        .menu.show {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+        }
+        .container a button {
+            background: #333;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .container a button:hover {
+            background: #555;
+        }
+        .p1 {
+            color: blue;
+            text-align: center;
+        }
+        .img1 {
+
+            width: 120px;
+            height: 120px;
+            border-radius: 20%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 4px var(--primary));
+        }
+        .h2 {
+            color: blue;
+            text-align: center;
+        }
+        .div2 {
+            text-align: center;
+            width: 300px;
+            background: #666;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .div3 {
+            text-align: center;
+            width: 88%;
+            background: linear-gradient(90deg,#00ff88,#00aaff);
+            padding: 5px 0;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+        }
+        .div4 {
+            text-align: center;
+            width: 300px;
+            background: #666;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .div5 {
+            text-align: center;
+            width: 98%;
+            background: linear-gradient(90deg,#00ff88,#00aaff);
+            padding: 5px 0;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+        }
+        .div6 {
+            text-align: center;
+            width: 300px;
+            background: #666;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .div7 {
+            text-align: center;
+            width: 88%;
+            background: linear-gradient(90deg,#00ff88,#00aaff);
+            padding: 5px 0;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+        }
+        .div8 {
+            text-align: center;
+            width: 300px;
+            background: #666;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .div9 {
+            text-align: center;
+            width: 100%;
+            background: linear-gradient(90deg,#00ff88,#00aaff);
+            padding: 5px 0;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+        }
+        .div10 {
+            text-align: center;
+            width: 300px;
+            background: #666;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .div11 {
+            text-align: center;
+            width: 99%;
+            background: linear-gradient(90deg,#00ff88,#00aaff);
+            padding: 5px 0;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+        }
+        .p2 {
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="mahyar" onclick="document.getElementById ('Menu').classList.toggle('show')">
+                   ☰
+        </div>
+        <div class="menu" id="Menu">
+            <a href="index.html">خانه</a>
+            <a href="page1.html">کار های من</a>
+            <a href="page3.html">تماس با من</a>
+        </div>
+    </nav>
+
+    <p class="p1">
+        <img src="me.jpg" alt="تصویر من" class="img1">
+        <br>
+        من یک ماینکرفت پلیر حرفه ای
+        <br>
+        یک برنامه نویسی حرفه ای
+        <br>
+        و یه و یک یوتیوبر هستم
+    </p>
+    <h2 class="h2">چه چیز هایی بلدم</h2>
+    <div class="div2">
+        html
+        <div class="div3">
+            88%
+        </div>
+    </div>
+    <br>
+    <div class="div4">
+        css
+        <div class="div5">
+            98%
+        </div>
+    </div>
+    <br>
+    <div class="div6">
+        js
+        <div class="div7">
+            88%
+        </div>
+    </div>
+    <br>
+    <div class="div8">
+        کد نویسی
+        <div class="div9">
+            75%
+        </div>
+    </div>
+    <br>
+    <div class="div10">
+        طراحی و انلاین کردم سایت
+        <div class="div11">
+            99%
+        </div>
+    </div>
+
+
+    <br>
+    <p class="p2">
+        <div style="display:flex; gap:10px; color:rgb(1,250,1);">
+            <br>
+
+            <div>
+                جنبه شوخی<div class="div12" style="width:120px;height:120px;border-radius:50%;background:conic-gradient(#00ff88 0% 99%, #333 0%);display:flex;align-items:center;justify-content:center;color:#888;font-weight:bold;font-size:20px;">
+                    99%
+                </div>
+            </div>
+            <br>
+            <br><br><br>
+            <div>
+                حرفه در نوشتن ۰ تا ۱۰۰ سایت<div class="div13" style="width:120px;height:120px;border-radius:50%;background:conic-gradient(#00ff88 0% 98%, #333 0%);display:flex;align-items:center;justify-content:center;color:#888;font-weight:bold;font-size:20px;">
+                    98%
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="display:flex; gap:10px; color:rgb(1,250,1);">
+            <br>
+            <div>
+                بینایی و عمل کردی<div class="div14" style="width:120px;height:120px;border-radius:50%;background:conic-gradient(#00ff88 0% 101%, #333 0%);display:flex;align-items:center;justify-content:center;color:#888;font-weight:bold;font-size:20px;">
+                    101%
+                </div>
+            </div>
+            <br>
+            <div>
+                دست تند<div class="div15" style="width:120px;height:120px;border-radius:50%;background:conic-gradient(#00ff88 0% 89%, #333 0%);display:flex;align-items:center;justify-content:center;color:#888;font-weight:bold;font-size:20px;">
+                    89%
+                </div>
+            </div>
+        </div>
+    </p>
+
+</body>
+</html>

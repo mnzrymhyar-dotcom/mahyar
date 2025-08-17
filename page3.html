@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+<style>
+  body { font-family: Vazir, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: rgb(40,32,120);
+
+        }
+  nav { background:#333; padding:10px; position:relative; }
+  .mahyar { font-size:30px; cursor:pointer; color:white; }
+  .menu { display:none; flex-direction:column; background:#444; position:absolute; top:50px; center:10px; border-radius:8px; overflow:hidden; }
+  .menu a { color:white; padding:10px 20px; text-decoration:none; display:block; }
+  .menu a:hover { background:#666; }
+  .menu.show { display:flex; }
+  .container { padding:20px; }
+  .container a button { background:#333; color:white; padding:15px 30px; border:none; border-radius:8px; font-size:18px; margin:10px; cursor:pointer; }
+  .container a button:hover { background:#555; }
+.ipt1{
+height:40px;
+background-color:rgb(23,40,85);
+border-radius:7px;
+color:white;
+}
+.ipt2{
+height:40px;
+background-color:rgb(23,40,85);
+border-radius:7px;
+color:white;
+}
+.ipt3{
+height:80px;
+background-color:rgb(23,40,85);
+border-radius:7px;
+color:white;
+}
+.number{
+background-color:rgb(23,40,85);
+border-radius:7px;
+color:white;
+text-align: center;
+      margin: 0;
+      height: 10vh; /* تمام ارتفاع صفحه */
+      display: flex;
+      justify-content: center; /* افقی وسط */
+      align-items: center;
+    }
+    .stars {
+      display: flex;
+      direction: rtl; /* ستاره‌ها از راست به چپ */
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .stars span {
+      color: lightgray;
+      transition: color 0.2s;
+    }
+    .stars span.active {
+      color: gold;
+    }
+    .btn-send{
+     background-color:rgb(23,40,85);
+border-radius:7px;
+color:white;
+    }
+    .btn-cansle{
+        background-color:rgb(23,40,85);
+border-radius:7px;
+color:white;
+    }
+  </style>
+
+
+
+
+</head>
+<body>
+
+
+
+<nav>
+  <div class="mahyar" onclick="document.getElementById('Menu').classList.toggle('show')">☰</div>
+  <div class="menu" id="Menu">
+    <a href="index.html">خانه</a>
+    <a href="page1.html">کار های من</a>
+    <a href="page2.html">درباره ی من</a>
+  </div>
+</nav>
+
+
+<div class="number">
+           شماره تلفن من
+<br>
+09223214940
+</div>
+<br>
+<br>
+<form>
+<input placeholder="نام" class="ipt1">
+<br><br>
+<p id="p1"></p>
+<input placeholder="نام خانوادگی" class="ipt2">
+<p id="p2"></p>
+<br>
+<input placeholder="نظر"class="ipt3">
+<br><p id="p3"></p><br>
+<button class="btn-cansle">بستن</button>
+<button class="btn-send">ارسال</button>
+</form>
+<br>
+  <h2>به من امتیاز بدهید:</h2>
+  <div class="stars">
+    <span data-value="5">★</span>
+    <span data-value="4">★</span>
+    <span data-value="3">★</span>
+    <span data-value="2">★</span>
+    <span data-value="1">★</span>
+  </div>
+  <p id="result"></p>
+<script>
+const stars = document.querySelectorAll(".stars span");
+    const result = document.getElementById("result");
+    let rating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        rating = star.getAttribute("data-value");
+        updateStars(rating);
+       
+      });
+
+      star.addEventListener("mouseover", () => {
+        updateStars(star.getAttribute("data-value"));
+      });
+
+      star.addEventListener("mouseleave", () => {
+        updateStars(rating);
+      });
+    });
+
+    function updateStars(value) {
+      stars.forEach(star => {
+        star.classList.toggle("active", star.getAttribute("data-value") <= value);
+      });
+    }
+
+</script>
+</body>
+</html>
